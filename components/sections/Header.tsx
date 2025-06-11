@@ -34,12 +34,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-slate-950/60">
-      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+      <div className="container flex h-20 items-center justify-between px-4 md:px-6 mx-auto">
         <div className="flex items-center space-x-3 group cursor-pointer">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
-            <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600 group-hover:scale-110 transition-transform">
-              <Brain className="h-7 w-7 text-white" />
+            <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600 group-hover:scale-110 transition-transform">
+              <Brain className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white" />
             </div>
           </div>
           <div>
@@ -129,7 +129,7 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
-          <nav className="container px-4 py-4 space-y-3">
+          <nav className="container px-4 py-4 space-y-3 mx-auto">
             {["About", "Projects", "Publications", "Experience", "Blog"].map((item) => (
               <Link
                 key={item}

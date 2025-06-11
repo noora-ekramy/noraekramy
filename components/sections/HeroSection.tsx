@@ -36,13 +36,13 @@ export default function HeroSection() {
       {/* Dynamic gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-950/50 via-indigo-950/30 to-blue-950/50"></div>
 
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center">
-          <div className="space-y-10 animate-fade-in-up">
+      <div className="container px-4 md:px-6 relative z-10 mx-auto">
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-20 items-center justify-center max-w-7xl mx-auto">
+          <div className="space-y-10 animate-fade-in-up text-center lg:text-left">
             <div className="space-y-6">
               <Badge
                 variant="secondary"
-                className="w-fit bg-purple-500/20 text-purple-300 border-purple-500/30 px-4 py-2 text-sm font-medium hover:bg-purple-500/30 transition-colors cursor-default"
+                className="w-fit mx-auto lg:mx-0 bg-purple-500/20 text-purple-300 border-purple-500/30 px-4 py-2 text-sm font-medium hover:bg-purple-500/30 transition-colors cursor-default"
               >
                 <Zap className="w-4 h-4 mr-2" />
                 AI Engineer & Researcher
@@ -56,13 +56,13 @@ export default function HeroSection() {
                 </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-300 max-w-[600px] leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-300 max-w-[600px] leading-relaxed mx-auto lg:mx-0">
                 Passionate AI engineer specializing in machine learning, deep learning, and cutting-edge AI
                 research. Transforming complex problems into intelligent solutions that make a real-world impact.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
               <Link href="#projects">
                 <Button
                   size="lg"
@@ -89,7 +89,7 @@ export default function HeroSection() {
             </div>
 
             {/* Enhanced Social Links */}
-            <div className="flex items-center space-x-6 pt-4">
+            <div className="flex items-center justify-center lg:justify-start space-x-6 pt-4">
               {[
                 { icon: Github, href: "https://github.com/noora-ekramy", color: "hover:text-purple-400", title: "GitHub" },
                 { icon: Linkedin, href: "https://www.linkedin.com/in/nora-ekramy-89b2681b4", color: "hover:text-blue-400", title: "LinkedIn" },
@@ -111,7 +111,7 @@ export default function HeroSection() {
           </div>
 
           {/* Revolutionary Photo Integration */}
-          <div className="relative">
+          <div className="relative flex justify-center">
             <div className="relative w-full max-w-lg mx-auto">
               {/* Enhanced dynamic background effects */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-blue-500/40 rounded-full blur-3xl animate-pulse"></div>
@@ -146,33 +146,33 @@ export default function HeroSection() {
               </div>
 
               {/* Enhanced interactive floating elements */}
-              <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-purple-500/50 to-purple-600/50 rounded-3xl flex items-center justify-center backdrop-blur-md border border-purple-400/60 shadow-2xl shadow-purple-500/40 hover:scale-110 hover:rotate-12 transition-all duration-500 cursor-pointer group">
-                <Brain className="h-12 w-12 text-purple-100 group-hover:text-white transition-colors" />
+              <div className="absolute -top-10 -right-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 bg-gradient-to-br from-purple-500/50 to-purple-600/50 rounded-3xl flex items-center justify-center backdrop-blur-md border border-purple-400/60 shadow-2xl shadow-purple-500/40 hover:scale-110 hover:rotate-12 transition-all duration-500 cursor-pointer group">
+                <Brain className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 text-purple-100 group-hover:text-white transition-colors" />
                 <div className="absolute inset-0 bg-purple-400/30 rounded-3xl animate-ping"></div>
               </div>
 
-              <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-gradient-to-br from-blue-500/50 to-blue-600/50 rounded-3xl flex items-center justify-center backdrop-blur-md border border-blue-400/60 shadow-2xl shadow-blue-500/40 hover:scale-110 hover:rotate-12 transition-all duration-500 cursor-pointer group">
-                <Cpu className="h-12 w-12 text-blue-100 group-hover:text-white transition-colors" />
+              <div className="absolute -bottom-10 -left-10 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 bg-gradient-to-br from-blue-500/50 to-blue-600/50 rounded-3xl flex items-center justify-center backdrop-blur-md border border-blue-400/60 shadow-2xl shadow-blue-500/40 hover:scale-110 hover:rotate-12 transition-all duration-500 cursor-pointer group">
+                <Cpu className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-14 lg:w-14 xl:h-16 xl:w-16 text-blue-100 group-hover:text-white transition-colors" />
                 <div className="absolute inset-0 bg-blue-400/30 rounded-3xl animate-ping delay-500"></div>
               </div>
 
-              <div className="absolute top-1/2 -right-14 w-18 h-18 bg-gradient-to-br from-cyan-500/40 to-cyan-600/40 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-cyan-400/50 shadow-xl shadow-cyan-500/30 hover:scale-110 hover:rotate-6 transition-all duration-500 cursor-pointer">
-                <Network className="h-10 w-10 text-cyan-200" />
+              <div className="absolute top-1/2 -right-14 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 bg-gradient-to-br from-cyan-500/40 to-cyan-600/40 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-cyan-400/50 shadow-xl shadow-cyan-500/30 hover:scale-110 hover:rotate-6 transition-all duration-500 cursor-pointer">
+                <Network className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 text-cyan-200" />
               </div>
 
-              <div className="absolute top-1/4 -left-14 w-18 h-18 bg-gradient-to-br from-indigo-500/40 to-indigo-600/40 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-indigo-400/50 shadow-xl shadow-indigo-500/30 hover:scale-110 hover:rotate-6 transition-all duration-500 cursor-pointer">
-                <Database className="h-10 w-10 text-indigo-200" />
+              <div className="absolute top-1/4 -left-14 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 bg-gradient-to-br from-indigo-500/40 to-indigo-600/40 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-indigo-400/50 shadow-xl shadow-indigo-500/30 hover:scale-110 hover:rotate-6 transition-all duration-500 cursor-pointer">
+                <Database className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12 text-indigo-200" />
               </div>
 
-              <div className="absolute bottom-1/4 -right-8 w-14 h-14 bg-gradient-to-br from-violet-500/30 to-violet-600/30 rounded-xl flex items-center justify-center backdrop-blur-sm border border-violet-400/40 shadow-lg shadow-violet-500/20 hover:scale-110 transition-all duration-500 cursor-pointer">
-                <Zap className="h-7 w-7 text-violet-200" />
+              <div className="absolute bottom-1/4 -right-8 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 bg-gradient-to-br from-violet-500/30 to-violet-600/30 rounded-xl flex items-center justify-center backdrop-blur-sm border border-violet-400/40 shadow-lg shadow-violet-500/20 hover:scale-110 transition-all duration-500 cursor-pointer">
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 xl:h-9 xl:w-9 text-violet-200" />
               </div>
 
               {/* Enhanced animated particles */}
-              <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-purple-400 rounded-full animate-bounce delay-300 shadow-lg shadow-purple-400/50"></div>
-              <div className="absolute bottom-1/4 left-1/3 w-3 h-3 bg-blue-400 rounded-full animate-bounce delay-700 shadow-lg shadow-blue-400/50"></div>
-              <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-cyan-400 rounded-full animate-bounce delay-1000 shadow-lg shadow-cyan-400/50"></div>
-              <div className="absolute top-1/3 left-1/4 w-2.5 h-2.5 bg-indigo-400 rounded-full animate-bounce delay-1300 shadow-lg shadow-indigo-400/50"></div>
+              <div className="absolute top-1/4 right-1/4 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 bg-purple-400 rounded-full animate-bounce delay-300 shadow-lg shadow-purple-400/50"></div>
+              <div className="absolute bottom-1/4 left-1/3 w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 bg-blue-400 rounded-full animate-bounce delay-700 shadow-lg shadow-blue-400/50"></div>
+              <div className="absolute top-3/4 right-1/3 w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 lg:w-4 lg:h-4 bg-cyan-400 rounded-full animate-bounce delay-1000 shadow-lg shadow-cyan-400/50"></div>
+              <div className="absolute top-1/3 left-1/4 w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 bg-indigo-400 rounded-full animate-bounce delay-1300 shadow-lg shadow-indigo-400/50"></div>
 
               {/* Connecting energy lines */}
               <div className="absolute top-1/3 right-0 w-32 h-px bg-gradient-to-r from-purple-400/60 to-transparent animate-pulse"></div>

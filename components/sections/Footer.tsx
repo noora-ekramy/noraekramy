@@ -43,12 +43,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-950 text-white py-20 border-t border-slate-800 relative">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600">
-                <Brain className="h-6 w-6 text-white" />
+              <div className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600">
+                <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Nora Ekramy
@@ -123,7 +123,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
           <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Nora Ekramy. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link 

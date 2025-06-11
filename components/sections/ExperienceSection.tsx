@@ -68,8 +68,8 @@ export default function ExperienceSection() {
 
   return (
     <section id="experience" className="py-32 relative">
-      <div className="container px-4 md:px-6">
-        <div className="text-center space-y-6 mb-20">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center space-y-6 mb-20 max-w-4xl mx-auto">
           <Badge variant="outline" className="w-fit mx-auto border-orange-500/30 text-orange-300 px-4 py-2">
             <Zap className="w-4 h-4 mr-2" />
             My AI Journey
@@ -92,7 +92,7 @@ export default function ExperienceSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 max-w-7xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-2 max-w-7xl mx-auto justify-items-center">
           {expertiseAreas.map((area, index) => (
             <Card
               key={index}
@@ -100,8 +100,8 @@ export default function ExperienceSection() {
             >
               <CardContent className="p-8">
                 <div className="flex items-start space-x-6">
-                  <div className={`flex-shrink-0 w-20 h-20 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center hover:scale-110 transition-transform group-hover:rotate-3`}>
-                    <area.icon className={`h-10 w-10 ${area.iconColor}`} />
+                  <div className={`flex-shrink-0 w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 lg:w-22 lg:h-22 xl:w-24 xl:h-24 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center hover:scale-110 transition-transform group-hover:rotate-3`}>
+                    <area.icon className={`h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-11 lg:w-11 xl:h-12 xl:w-12 ${area.iconColor}`} />
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-start mb-4">
@@ -138,7 +138,7 @@ export default function ExperienceSection() {
 
         {/* Fun Stats Section */}
         <div className="mt-20 text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto justify-items-center">
             {[
               { number: "∞", label: "Curiosity Level", color: "text-purple-400" },
               { number: "24/7", label: "Learning Mode", color: "text-blue-400" },

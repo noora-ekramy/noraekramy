@@ -7,8 +7,8 @@ import Link from "next/link"
 export default function BlogSection() {
   return (
     <section id="blog" className="py-32 bg-gradient-to-br from-slate-900/50 to-blue-900/20 relative">
-      <div className="container px-4 md:px-6">
-        <div className="text-center space-y-6 mb-20">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center space-y-6 mb-20 max-w-4xl mx-auto">
           <Badge variant="outline" className="w-fit mx-auto border-cyan-500/30 text-cyan-300 px-4 py-2">
             <BookOpen className="w-4 h-4 mr-2" />
             Blog
@@ -19,14 +19,14 @@ export default function BlogSection() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto justify-items-center">
           {/* AI Trends 2024 */}
           <Link href="/blog/ai-trends-2024">
             <Card className="bg-slate-800/50 border-slate-700/50 group hover:border-purple-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer overflow-hidden">
               <CardHeader>
-                <div className="w-full h-56 bg-gradient-to-br from-purple-500/20 to-blue-600/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
-                  <TrendingUp className="h-16 w-16 text-purple-400 z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="w-full h-48 sm:h-52 md:h-56 lg:h-60 xl:h-64 bg-gradient-to-br from-purple-500/20 to-indigo-600/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                  <TrendingUp className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 xl:h-20 xl:w-20 text-purple-400 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-400 mb-3">
                   <Calendar className="w-4 h-4" />
@@ -61,8 +61,8 @@ export default function BlogSection() {
           <Link href="/blog/building-chatbots">
             <Card className="bg-slate-800/50 border-slate-700/50 group hover:border-blue-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer overflow-hidden">
               <CardHeader>
-                <div className="w-full h-56 bg-gradient-to-br from-blue-500/20 to-cyan-600/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
-                  <MessageCircle className="h-16 w-16 text-blue-400 z-10" />
+                <div className="w-full h-48 sm:h-52 md:h-56 lg:h-60 xl:h-64 bg-gradient-to-br from-blue-500/20 to-cyan-600/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                  <MessageCircle className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 xl:h-20 xl:w-20 text-blue-400 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-400 mb-3">
@@ -98,8 +98,8 @@ export default function BlogSection() {
           <Link href="/blog/future-of-ai">
             <Card className="bg-slate-800/50 border-slate-700/50 group hover:border-indigo-500/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer overflow-hidden">
               <CardHeader>
-                <div className="w-full h-56 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
-                  <Sparkles className="h-16 w-16 text-indigo-400 z-10" />
+                <div className="w-full h-48 sm:h-52 md:h-56 lg:h-60 xl:h-64 bg-gradient-to-br from-indigo-500/20 to-purple-600/20 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                  <Sparkles className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-18 lg:w-18 xl:h-20 xl:w-20 text-indigo-400 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-gray-400 mb-3">

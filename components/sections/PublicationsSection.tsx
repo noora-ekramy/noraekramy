@@ -7,8 +7,8 @@ import Link from "next/link"
 export default function PublicationsSection() {
   return (
     <section id="publications" className="py-32 bg-gradient-to-br from-purple-900/20 to-slate-900/50 relative">
-      <div className="container px-4 md:px-6">
-        <div className="text-center space-y-6 mb-20">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center space-y-6 mb-20 max-w-4xl mx-auto">
           <Badge variant="outline" className="w-fit mx-auto border-purple-500/30 text-purple-300 px-4 py-2">
             <BookOpen className="w-4 h-4 mr-2" />
             Publications
@@ -24,8 +24,8 @@ export default function PublicationsSection() {
           <Card className="bg-slate-800/50 border-slate-700/50 hover:border-purple-500/50 transition-all duration-500 hover:scale-[1.02] cursor-pointer">
             <CardContent className="p-8">
               <div className="flex items-start space-x-6">
-                                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform">
-                    <BookOpen className="h-8 w-8 text-purple-400" />
+                                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-18 lg:h-18 xl:w-20 xl:h-20 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform">
+                    <BookOpen className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 lg:h-9 lg:w-9 xl:h-10 xl:w-10 text-purple-400" />
                   </div>
                 <div className="flex-1">
                                       <h3 className="text-2xl font-semibold text-white mb-3 hover:text-purple-400 transition-colors">

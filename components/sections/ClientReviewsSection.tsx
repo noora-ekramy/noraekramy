@@ -64,8 +64,8 @@ export default function ClientReviewsSection() {
 
   return (
     <section id="reviews" className="py-32 bg-gradient-to-br from-indigo-900/20 to-purple-900/30 relative">
-      <div className="container px-4 md:px-6">
-        <div className="text-center space-y-6 mb-20">
+      <div className="container px-4 md:px-6 mx-auto">
+        <div className="text-center space-y-6 mb-20 max-w-4xl mx-auto">
           <Badge variant="outline" className="w-fit mx-auto border-yellow-500/30 text-yellow-300 px-4 py-2">
             <Star className="w-4 h-4 mr-2" />
             Client Reviews
@@ -99,7 +99,7 @@ export default function ClientReviewsSection() {
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto mb-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto justify-items-center">
           {reviews.map((review, index) => (
             <Card
               key={index}

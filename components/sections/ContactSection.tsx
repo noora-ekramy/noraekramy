@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
     <section className="py-32 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-600/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 to-blue-900/30"></div>
-      <div className="container px-4 md:px-6 text-center relative z-10">
+      <div className="container px-4 md:px-6 text-center relative z-10 mx-auto">
         <div className="max-w-4xl mx-auto space-y-10">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Let's Build the Future Together
@@ -15,7 +15,7 @@ export default function ContactSection() {
             Interested in collaboration, research opportunities, or discussing AI innovations? I'd love to connect
             and explore how we can work together to create something amazing.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link href="mailto:nora@youtiva.com">
               <Button
                 size="lg"
