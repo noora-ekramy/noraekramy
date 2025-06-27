@@ -34,24 +34,24 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/80 backdrop-blur-xl supports-[backdrop-filter]:bg-slate-950/60">
-      <div className="container flex h-20 items-center justify-between px-4 md:px-6 mx-auto">
-        <div className="flex items-center space-x-3 group cursor-pointer">
+      <div className="container flex h-16 md:h-20 items-center justify-between px-4 md:px-6 mx-auto">
+        <div className="flex items-center space-x-2 md:space-x-3 group cursor-pointer">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
-            <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 md:h-12 md:w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600 group-hover:scale-110 transition-transform">
-              <Brain className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7 text-white" />
+            <div className="relative flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600 group-hover:scale-110 transition-transform">
+              <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7 text-white" />
             </div>
           </div>
           <div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Nora Ekramy
             </span>
-            <p className="text-xs text-gray-400">AI Engineer & Researcher</p>
+            <p className="text-xs text-gray-400 hidden sm:block">AI Engineer & Researcher</p>
           </div>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {["About", "Projects", "Publications", "Experience", "Blog"].map((item) => (
             <Link
               key={item}
@@ -65,7 +65,7 @@ export default function Header() {
         </nav>
 
         {/* Enhanced CTA Button and Social Links */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 md:space-x-4">
           {/* Social Links - Desktop Only */}
           <div className="hidden lg:flex items-center space-x-3">
             <Link
@@ -105,10 +105,11 @@ export default function Header() {
           </div>
 
           <Link href="mailto:nora@youtiva.com">
-            <Button className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105">
+            <Button className="hidden sm:flex relative overflow-hidden bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-4 md:px-6 py-2 md:py-3 rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105 text-sm md:text-base">
               <span className="relative z-10 flex items-center">
-                Contact Me
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <span className="hidden md:inline">Contact Me</span>
+                <span className="md:hidden">Contact</span>
+                <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             </Button>
@@ -118,10 +119,10 @@ export default function Header() {
           <Button
             variant="ghost"
             size="sm"
-            className="md:hidden text-white"
+            className="md:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </div>
@@ -134,15 +135,27 @@ export default function Header() {
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="block text-gray-300 hover:text-white transition-colors py-2"
+                className="block text-gray-300 hover:text-white transition-colors py-3 text-base font-medium border-b border-slate-800/50 last:border-b-0"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
               </Link>
             ))}
             
+            {/* Mobile Contact Button */}
+            <div className="pt-4">
+              <Link href="mailto:nora@youtiva.com">
+                <Button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300">
+                  <span className="flex items-center justify-center">
+                    Contact Me
+                    <Mail className="ml-2 h-4 w-4" />
+                  </span>
+                </Button>
+              </Link>
+            </div>
+            
             {/* Mobile Social Links */}
-            <div className="flex items-center space-x-4 pt-4 border-t border-white/10">
+            <div className="flex items-center justify-center space-x-6 pt-4 border-t border-white/10">
               <Link
                 href="https://github.com/noora-ekramy"
                 target="_blank"

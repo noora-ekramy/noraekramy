@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Header from "@/components/sections/Header"
 import HeroSection from "@/components/sections/HeroSection"
+import AboutSection from "@/components/sections/AboutSection"
 import ProjectsSection from "@/components/sections/ProjectsSection"
 import PublicationsSection from "@/components/sections/PublicationsSection"
 import ExperienceSection from "@/components/sections/ExperienceSection"
@@ -27,6 +28,7 @@ export default function AIEngineerPortfolio() {
       <Header />
       <main className="relative">
         <HeroSection />
+        <AboutSection />
         <ProjectsSection />
         <PublicationsSection />
         <ExperienceSection />

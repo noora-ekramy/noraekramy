@@ -42,22 +42,22 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-slate-950 text-white py-20 border-t border-slate-800 relative">
+    <footer className="bg-slate-950 text-white py-16 md:py-20 border-t border-slate-800 relative">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
-          <div className="space-y-6">
-            <div className="flex items-center space-x-3">
+        <div className="grid gap-8 md:gap-12 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+          <div className="space-y-4 md:space-y-6 sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center space-x-2 md:space-x-3">
               <div className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-blue-600">
                 <Brain className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Nora Ekramy
               </span>
             </div>
-            <p className="text-gray-400 leading-relaxed">
+            <p className="text-gray-400 leading-relaxed text-sm md:text-base">
               AI & Machine Learning Engineer | CTO at Youtive. Experienced in AI-driven solutions, optimizing models and developing innovative AI systems.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 md:space-x-4">
               {socialLinks.map((social, index) => (
                 <Link
                   key={index}
@@ -67,7 +67,7 @@ export default function Footer() {
                   className={`text-gray-400 ${social.hoverColor} transition-all duration-300 hover:scale-125 hover:-translate-y-1`}
                   title={social.title}
                 >
-                  <social.icon className="h-6 w-6" />
+                  <social.icon className="h-5 w-5 md:h-6 md:w-6" />
                 </Link>
               ))}
             </div>
@@ -104,16 +104,16 @@ export default function Footer() {
               ]
             },
           ].map((section, index) => (
-            <div key={index} className="space-y-6">
-              <h3 className="text-lg font-semibold text-white">{section.title}</h3>
-              <div className="space-y-3">
+            <div key={index} className="space-y-4 md:space-y-6">
+              <h3 className="text-base md:text-lg font-semibold text-white">{section.title}</h3>
+              <div className="space-y-2 md:space-y-3">
                 {section.links.map((link) => (
                   <Link 
                     key={link.name} 
                     href={link.href}
                     target={link.href.startsWith('http') ? "_blank" : undefined}
                     rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
-                    className="block text-gray-400 hover:text-white transition-colors"
+                    className="block text-gray-400 hover:text-white transition-colors text-sm md:text-base"
                   >
                     {link.name}
                   </Link>
@@ -123,12 +123,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Nora Ekramy. All rights reserved.</p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+        <div className="border-t border-slate-800 mt-12 md:mt-16 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-4">
+          <p className="text-gray-400 text-xs md:text-sm">© {new Date().getFullYear()} Nora Ekramy. All rights reserved.</p>
+          <div className="flex space-x-4 md:space-x-6">
             <Link 
               href="mailto:nora@youtiva.com" 
-              className="text-gray-400 hover:text-white text-sm transition-colors"
+              className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors"
             >
               Contact
             </Link>
@@ -136,7 +136,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/nora-ekramy-89b2681b4" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white text-sm transition-colors"
+              className="text-gray-400 hover:text-white text-xs md:text-sm transition-colors"
             >
               LinkedIn
             </Link>
